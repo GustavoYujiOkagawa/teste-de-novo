@@ -4,7 +4,7 @@ const PromoBanner = () => {
   return (
     <div className="CardPromoBanner">
       <div className="Item">
-        <img src={PromoBannerImg} width={250} />
+        <img src={PromoBannerImg} width={300} />
       </div>
     </div>
   );
