@@ -3,9 +3,12 @@ import NavLinks from "../components/NavLinks";
 import PromoBanner from "../components/PromoBanner";
 import CardIten from "../components/CardIten";
 import { Link } from "react-router-dom";
-import { imagem1, imagem3, imagem4, imagem5 } from "../constants/index";
+import pratosData from '../data/menu.json';
+import {IMAGES ,PromoBanner1, PromoBanner2, PromoBanner3 } from "../constants/index";
+ 
+const lanches = pratosData.lanches.slice(0, 4);
 
-const Home = () => {
+const Home = (nome, descricao) => {
   return (
     <div className="content">
       <header>
@@ -13,11 +16,11 @@ const Home = () => {
       </header>
       <div className="header-container">
         <NavLinks />
-      </div>
+      </div> 
       <section className="promo-banner-container">
-        <PromoBanner />
-        <PromoBanner />
-        <PromoBanner />
+        <PromoBanner PromoBanner={PromoBanner1}/>
+        <PromoBanner PromoBanner={PromoBanner2}/>
+        <PromoBanner PromoBanner={PromoBanner3}/>
       </section>
       <div className="box-info">
         <p className="info-text">Os mais pedidos...</p>
@@ -26,10 +29,15 @@ const Home = () => {
         </button>
       </div>
       <section className="card-container">
-        <CardIten imageSrc={imagem1} />
-        <CardIten imageSrc={imagem3} />
-        <CardIten imageSrc={imagem4} />
-        <CardIten imageSrc={imagem5} />
+      {lanches.map((prato, index) => (
+        <CardIten 
+          key={prato.id} 
+          imageSrc={IMAGES[index].src} 
+          imageAlt={IMAGES[index].alt} 
+          nome={prato.nome} 
+          descricao={prato.descricao} 
+        />
+      ))}
       </section>
     </div>
   );

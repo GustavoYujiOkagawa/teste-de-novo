@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { navlink1, navlink2, navlink3, navlink4 } from "../constants";
 
 const NavLinks = () => {
   return (
@@ -7,43 +8,44 @@ const NavLinks = () => {
       <ul className="nav-list">
         <li className="first-item">
           <NavLink
-            exact="true"
             to="/"
             className={({ isActive }) => (isActive ? "active-link" : "")}
           >
-            Home
-          </NavLink>
+            <div className="Navlinks_link_burguer">
+            <img src={navlink1} width={40} alt="" />
+            <a>Burguer</a>
+            </div>
+          </NavLink> 
         </li>
         <li>
           <NavLink
             to="/menu"
             className={({ isActive }) => (isActive ? "active-link" : "")}
           >
-            Pratos do dia
+            <div className="Navlinks_link_frits">
+            <img src={navlink4} width={28} alt="" />
+            <a>Fritas</a>
+            </div>
           </NavLink>
         </li>
         <li>
           <a
-            href="#lanches"
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-          >
-            Lanches
-          </a>
-        </li>
-        <li>
-          <a
             href="#sobremesas"
-            className={({ isActive }) => (isActive ? "active-link" : "")}
           >
-            Açai
+            <div className="Navlinks_link_sobre">
+            <img src={navlink3} width={28} alt="" />
+            <a>Sobremesa</a>
+            </div>
           </a>
         </li>
         <li>
           <a
             href="#bebidas"
-            className={({ isActive }) => (isActive ? "active-link" : "")}
           >
-            Bebidas
+            <div className="Navlinks_link_frits">
+            <img src={navlink2} width={28} alt="" />
+            <a>Bebidas</a>
+            </div>
           </a>
         </li>
         

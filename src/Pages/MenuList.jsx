@@ -1,10 +1,10 @@
 import React from 'react';
-import MenuCard from '../components/MenuCard';
+import MenuCard from '../components/MenuCard';  // Atualize para MenuCard
 import { IconArrowLeft, iconCart } from '../constants';
 import NavLinks from '../components/NavLinks';
 import { Link } from 'react-router-dom';
 import pratosData from '../data/menu.json';
-
+import CartIcon from '../components/CartIcon';
 
 const MenuList = () => {
   if (typeof pratosData !== 'object' || Array.isArray(pratosData)) {
@@ -12,7 +12,7 @@ const MenuList = () => {
     return null;
   }
 
-  const pratosprincipais = pratosData.pratosprincipais || [];
+  
   const lanches = pratosData.lanches || [];
   const sobremesas = pratosData.sobremesas || [];
   const bebidas = pratosData.bebidas || [];
@@ -21,37 +21,27 @@ const MenuList = () => {
     <div className='Header-Menu-containe'>
       <div className='Heading'>
         <div className='Heading-arrow'>
-          <Link to="/"><img src={IconArrowLeft} width={20} alt="" /></Link>
+          <Link to="/"><img src={IconArrowLeft} width={20} alt="Voltar" /></Link>
         </div>
         <div className='Heading-Info'>
-          <h3>Todos os pratos</h3>
+          <h3>Cardápio</h3>
         </div>
         <div className='Icon-Cart'>
-          <Link to="/cart" className='icon-link'>
-            <img src={iconCart} width={20} alt="Icon Cart" /> 
-            <span className='notification-badge'>0</span>         
-          </Link>
+          <CartIcon />
         </div>
       </div>
       <header className='HeadingMenu'>
         <NavLinks />
       </header>
       <div className='Input-containe'></div>
-      <div className='Info-Product'>
-        <h5>Pratos principais</h5>
-        {pratosprincipais.length > 0 ? (
-          pratosprincipais.map(prato => (
-            <MenuCard key={prato.id} prato={prato} />
-          ))
-        ) : (
-          <p>Nenhum prato principal encontrado.</p>
-        )}
-      </div>
       <div id='lanches' className='Info-Product'>
         <h5>Lanches</h5>
         {lanches.length > 0 ? (
           lanches.map(prato => (
-            <MenuCard key={prato.id} prato={prato} />
+            <MenuCard
+              key={prato.id}
+              prato={prato}
+            />
           ))
         ) : (
           <p>Nenhum lanche encontrado.</p>
@@ -61,7 +51,10 @@ const MenuList = () => {
         <h5>Açai</h5>
         {sobremesas.length > 0 ? (
           sobremesas.map(prato => (
-            <MenuCard key={prato.id} prato={prato} />
+            <MenuCard
+              key={prato.id}
+              prato={prato}
+            />
           ))
         ) : (
           <p>Nenhuma sobremesa encontrada.</p>
@@ -71,7 +64,10 @@ const MenuList = () => {
         <h5>Bebidas</h5>
         {bebidas.length > 0 ? (
           bebidas.map(prato => (
-            <MenuCard key={prato.id} prato={prato} />
+            <MenuCard
+              key={prato.id}
+              prato={prato}
+            />
           ))
         ) : (
           <p>Nenhuma bebida encontrada.</p>
@@ -79,6 +75,6 @@ const MenuList = () => {
       </div>
     </div>
   );
-}
+};
 
 export default MenuList;

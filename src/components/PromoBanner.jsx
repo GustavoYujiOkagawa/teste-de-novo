@@ -1,10 +1,9 @@
-import PromoBannerImg from "../public/images/BannerPromo.png";
 
-const PromoBanner = () => {
+const PromoBanner = ({PromoBanner}) => {
   return (
     <div className="CardPromoBanner">
-      <div className="Item">
-        <img src={PromoBannerImg} width={300} />
+      <div>
+        <img src={PromoBanner} width={300} className="Item"/>
       </div>
     </div>
   );
