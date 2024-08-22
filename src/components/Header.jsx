@@ -3,8 +3,8 @@ import {HeaderImage} from '../constants/index'
 
 const Header = () => {
   return (
-    <div >
-        <img src={HeaderImage} width={450} alt=""/>
+    <div className='header'>
+        <img src={HeaderImage} className='header-img' width={350} alt=""/>
     </div>
   )
 }

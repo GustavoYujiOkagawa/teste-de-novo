@@ -4,13 +4,16 @@ import PromoBanner from "../components/PromoBanner";
 import CardIten from "../components/CardIten";
 import { Link } from "react-router-dom";
 import pratosData from '../data/menu.json';
-import {IMAGES ,PromoBanner1, PromoBanner2, PromoBanner3 } from "../constants/index";
+import {iconHamburguer, IMAGES ,PromoBanner1, PromoBanner2, PromoBanner3 } from "../constants/index";
  
 const lanches = pratosData.lanches.slice(0, 4);
 
 const Home = (nome, descricao) => {
   return (
     <div className="content">
+      <div className="content-image-hamburguer">
+      <img src={iconHamburguer} width={32} alt="" />
+      </div>
       <header>
         <Header />
       </header>

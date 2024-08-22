@@ -25,7 +25,7 @@ const FinalizePage = () => {
       message,
     };
 
-    const whatsappUrl = `https://wa.me/PHONE_NUMBER?text=${encodeURIComponent(`Pedido:\nTotal: R$${totalAmount.toFixed(2)}\nEndereço: ${address}\nMensagem: ${message}`)}`;
+    const whatsappUrl = `https://wa.me/14988148216?text=${encodeURIComponent(`Pedido:\nTotal: R$${totalAmount.toFixed(2)}\nEndereço: ${address}\nMensagem: ${message}`)}`;
     window.open(whatsappUrl, '_blank');
 
     localStorage.removeItem('cart');
