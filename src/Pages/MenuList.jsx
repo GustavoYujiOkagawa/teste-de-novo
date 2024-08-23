@@ -1,18 +1,24 @@
-import React from 'react';
-import MenuCard from '../components/MenuCard';  // Atualize para MenuCard
-import { IconArrowLeft, iconCart } from '../constants';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import MenuCard from '../components/MenuCard';
+import { IconArrowLeft } from '../constants';
 import NavLinks from '../components/NavLinks';
 import { Link } from 'react-router-dom';
 import pratosData from '../data/menu.json';
 import CartIcon from '../components/CartIcon';
 
 const MenuList = () => {
-  if (typeof pratosData !== 'object' || Array.isArray(pratosData)) {
-    console.error('Os dados importados não são um objeto:', pratosData);
-    return null;
-  }
+  const location = useLocation();
 
-  
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
   const lanches = pratosData.lanches || [];
   const sobremesas = pratosData.sobremesas || [];
   const bebidas = pratosData.bebidas || [];

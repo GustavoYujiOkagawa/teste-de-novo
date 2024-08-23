@@ -13,6 +13,7 @@ import imagem4 from '../public/images/imagem4.png'
 import navlink1 from '../public/images/navlinks1.png'
 import navlink2 from '../public/images/navlinks2.png'
 import navlink3 from '../public/images/navlinks3.png'
+import imageHome from '../public/images/imageHome.png'
 import navlink4 from '../public/images/navlinks4.png'
 
 import IconArrowLeft from '../public/images/IconArrowLeft.png'
@@ -36,16 +37,18 @@ import iconCart from '../public/images/iconCart.png'
 
  export const NAVLINKS =[
    { id: 1, src: navlink1, alt: 'Imagens do Cardapio'},
-   { id: 1, src: navlink2, alt: 'Imagens do Cardapio'},
-   { id: 2, src: navlink3, alt: 'Imagens do Cardapio'},
-   { id: 3, src: navlink4, alt: 'Imagens do Cardapio'},
+   { id: 2, src: navlink2, alt: 'Imagens do Cardapio'},
+   { id: 3, src: navlink3, alt: 'Imagens do Cardapio'},
+   { id: 4, src: navlink4, alt: 'Imagens do Cardapio'},
+   { id: 5, src: imageHome, alt: 'Imagens do Cardapio'},
 ]
 
 export{
    navlink1,
    navlink2,
    navlink3,
-   navlink4
+   navlink4,
+   imageHome
 }
 
 

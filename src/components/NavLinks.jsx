@@ -1,54 +1,37 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { navlink1, navlink2, navlink3, navlink4 } from "../constants";
 
 const NavLinks = () => {
   return (
     <nav className="nav-container">
       <ul className="nav-list">
-        <li className="first-item">
-          <NavLink
-            to="/"
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-          >
-            <div className="Navlinks_link_burguer">
-            <img src={navlink1} width={40} alt="" />
-            <a>Burguer</a>
-            </div>
-          </NavLink> 
-        </li>
         <li>
           <NavLink
-            to="/menu"
-            className={({ isActive }) => (isActive ? "active-link" : "")}
+            to="/menu#lanches"
           >
             <div className="Navlinks_link_frits">
-            <img src={navlink4} width={28} alt="" />
-            <a>Fritas</a>
+              <span>Burguer</span>
             </div>
           </NavLink>
         </li>
         <li>
-          <a
-            href="#sobremesas"
+          <NavLink
+            to="/menu#sobremesas"
           >
             <div className="Navlinks_link_sobre">
-            <img src={navlink3} width={28} alt="" />
-            <a>Sobremesa</a>
+              <span>Sobremesa</span>
             </div>
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a
-            href="#bebidas"
+          <NavLink
+            to="/menu#bebidas"
           >
             <div className="Navlinks_link_frits">
-            <img src={navlink2} width={28} alt="" />
-            <a>Bebidas</a>
+              <span>Bebidas</span>
             </div>
-          </a>
+          </NavLink>
         </li>
-        
       </ul>
     </nav>
   );

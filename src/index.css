@@ -6,7 +6,7 @@ html {
 
 body {
   
- 
+  background: #0000000d;
   font-family: 'Poppins', sans-serif;
   }
 
@@ -82,7 +82,7 @@ body {
 
 .card-container {
   display: grid;
-  grid-template-columns: 174px 190px;
+  grid-template-columns: 170px 170px;
   gap: 15px;
   padding: 15px 30px 30px 30px;
 }
@@ -107,7 +107,13 @@ body {
 
 .card-item-container {
   position: relative;
-  width: 100%;  
+  width: 100%;
+  padding: 15px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -141,41 +147,19 @@ body {
 
 /*CSS do Navlinks*/
 
-.active-link {
-  display: flex;
-  border: 1px solid #FFB401;
-  border-radius: 10px;
-  color: #FFB401 !important;
-  padding: 5px;
-} 
 
-.Navlinks_link_burguer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.Navlinks_link_frits{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 10px;
-}
-.Navlinks_link_sobre{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
 
 .nav-container ul{
   list-style-type: none;
   margin-left: 16px;
 }
+
+.nav-container li{
+  border-radius: 10px;
+}
 .nav-container a{
   text-decoration: none;
+  font-weight: 600;
 }
 a{
   color: black;
@@ -187,6 +171,10 @@ a{
   font-weight: 500; 
   margin-bottom: 24px;
   margin-top: 10px;
+  max-height: 300px; 
+  display: flex; 
+  overflow-x: auto;
+  padding: 15px 0 0 0; 
 }
 
 .nav-list {
@@ -199,6 +187,35 @@ a{
 .nav-list li.first-item {
   color: rgb(0, 0, 0);
 }
+
+.App {
+  padding-bottom: 10px; 
+}
+
+.bottom-navbar {
+  position: fixed;
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.navbar-item {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  padding: 15px;
+}
+
+.navbar-item.active {
+  color: #007bff; 
+}
+
 
 /*CSS da interface do menu*/
 
@@ -330,11 +347,6 @@ a{
   padding: 0;
   width: 100%;
 }
-
-.button_menu:hover{
-  background-color: #00000018;
-}
-
 
 
 
