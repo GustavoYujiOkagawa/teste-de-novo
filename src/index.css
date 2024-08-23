@@ -50,7 +50,7 @@ body {
   display: flex;
   overflow-x: auto;
   gap: 40px;
-  padding-top: 10px;
+  padding: 15px 0px 0px 0px;
 }
 
 ::-webkit-scrollbar {
@@ -76,7 +76,7 @@ body {
 
 
 .info-text {
-  font-size: 0.76rem;
+  font-size: 0.85rem;
   font-weight: 600;
 }
 
@@ -225,14 +225,11 @@ a{
   padding-bottom: 24px;
   padding-top: 24px;
 }
-.HeadingMenu{
- margin-left: 1rem;
-}
+
 
 .Icon-Cart {
   width: 2.5rem; 
   height: 2.5rem;
-  background-color: #f7fafc;
   border-radius: 9999px;
   padding-top: 20px;
   padding-right: 15px;
@@ -251,7 +248,7 @@ a{
   top: 0.75rem; 
   right: -0.15rem; 
   background-color: #f56565; 
-  color: #ffffff; 
+  color: white;
   font-size: 0.875rem; 
   width: 1.25rem; 
   height: 1.25rem; 
@@ -317,14 +314,13 @@ a{
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  gap: 5px;
+  gap: 4rem;
   padding-top: 20px;
 }
 
 .Card-hover-menu:hover{
   height: 50%;
   border-radius: 10px;
-  width: 100%;
 }
 
 .button_menu{
@@ -350,24 +346,24 @@ a{
 .Info {
   font-size: 0.85rem;
   font-weight: 400;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 
 .Info-Product{
   text-align: center;
-  margin-top: 24px;
+  margin-top: 12px;
   width: 100%;
 }
 
 .info-paragraph {
-  font-size: 0.70rem;
+  font-size: 0.75rem;
   color: rgba(0, 0, 0, 0.577);
 }
 
 .Info-price {
   font-size: 0.75rem;
   margin-top: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 24px;
   padding-left: 24px;
   color: rgb(6, 176, 6);
 }
@@ -406,8 +402,10 @@ a{
 .Cart-Item-Name{
   width: 100%;
   margin-left: 15px;
-  font-size: 1.1rem;
+  font-size: 0.80rem;
   font-weight: 600;
+  display: flex;
+  align-items: center;
 }
 
 
@@ -421,6 +419,9 @@ a{
   font-weight: 500;
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.57);
+}
+.Card-item-Count{
+  padding: 10px 0px;
 }
 
 .Card-item-descrement{
@@ -436,4 +437,31 @@ a{
   padding: 5px 10px;
   border-radius: 5px;
   border: none;
+}
+
+.Cart-Item-Total{
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: 400;
+}
+.btn-concluir{
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  padding:4px 15px;
+  margin-top: 1rem;
+  height: 3rem;
+  background-color: #FFB401;
+  color: white;
+  font-size: 1.2rem;
+}
+.btn-cart-clear{
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  padding:4px 15px;
+  margin-top: 1rem;
+  height: 3rem;
+  font-size: 1.2rem;
+  background-color: transparent;
 }

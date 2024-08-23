@@ -1,22 +1,21 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
 import { Link, useNavigate } from "react-router-dom";
-import { IconArrowLeft, imagem1 } from "../constants";
+import { IconArrowLeft } from "../constants";
+import CartCard from "../components/CartCard";
 
 const CartPage = () => {
-  const { cart, handleRemoveItemFromCart, clearCart } = useContext(CartContext);
-  const [Count, SetCount] = useState(0);
+  const { cart, setCart, handleRemoveItemFromCart, clearCart } = useContext(CartContext);
   const navigate = useNavigate();
 
- /*  const totalAmount = cart.reduce((total, item) => {
-    const price = parseFloat(item.price) || 0;
-    const quantity = parseInt(item.quantity, 10) || 0;
-    return total + price * quantity;
-  }, 0); */
+  const updateItemPrice = (index, newPrice) => {
+    const updatedCart = [...cart];
+    updatedCart[index].price = newPrice;
+    setCart(updatedCart);
+  };
 
   const totalAmount = cart.reduce((total, item) => {
     const price = parseFloat(item.price) || 0;
-    const quantity = parseInt(item.quantity, Count) || 0;
     return total + price;
   }, 0);
 
@@ -25,13 +24,6 @@ const CartPage = () => {
     navigate("/finalizar");
   };
 
-  const HandleInclement = () =>{
-    SetCount(Count + 1)
-  }
-  const HandleDecrement = () =>{
-    SetCount(Count - 1)
-  }
-    
   return (
     <div className="cart-page">
       <div className="Cart-Item-Header">
@@ -45,22 +37,7 @@ const CartPage = () => {
           <ul>
             {cart.map((item, index) => (
               <li key={index} className="cart-item-Product">
-                <div className="Cart-Item-containe">
-                  <img src={imagem1} width={50} height={50} alt={item.name} />
-                  <p className="Cart-Item-Name">{item.name}</p>
-                  <div className="Cart-Item-Price">
-                    <p className="Cart-Item-Text-Price">
-                      R${parseFloat(item.price).toFixed(2)}
-                    </p>
-                    {/* <p className='Cart-Item-Text-qtd'>Quantidade: {parseInt(item.quantity, 10)}</p> */}
-                    <div className="">
-                      <button className="Card-item-descrement" onClick={HandleDecrement}>-</button>
-                      <span className="Card-item-qtd">{Count}</span>
-                      <button className="Card-item-inclement" onClick={HandleInclement}>+</button>
-                    </div>
-                  </div>
-                </div>
-                <hr />
+                <CartCard item={item} index={index} updateItemPrice={updateItemPrice} />
                 <button
                   className="Cart-Item-Button-Delete"
                   onClick={() => handleRemoveItemFromCart(index)}
@@ -78,7 +55,7 @@ const CartPage = () => {
               Concluir
             </button>
           </div>
-          <button onClick={clearCart}>Limpar Carrinho</button>
+          <button className="btn-cart-clear" onClick={clearCart}>Limpar Carrinho</button>
         </div>
       ) : (
         <p>Seu carrinho está vazio.</p>

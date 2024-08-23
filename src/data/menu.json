@@ -55,7 +55,7 @@
       "id": 1,
       "nome": "Suco de Laranja",
       "preco": 7.9,
-      "descricao": "Suco de laranja natural, sem açúcar."
+      "descricao": "Suco de laranja natural, sem açúcar com gelo para refrescar seu dia"
     },
     {
       "id": 2,
@@ -93,7 +93,7 @@
       "id": 2,
       "nome": "Torta de Limão",
       "preco": 12.9,
-      "descricao": "Torta de limão com base cro"
+      "descricao": "Torta de limão com base crocante e macia por dentro"
     }
   ]
 }

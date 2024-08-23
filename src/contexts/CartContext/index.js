@@ -14,17 +14,24 @@ export const CartProvider = ({ children }) => {
     setCart([...cart, itemObject]);
   };
 
-  const handleRemoveItemFromCart = (clickedItemIndex) => {
+   const handleRemoveItemFromCart = (clickedItemIndex) => {
     const filteredCart = cart.filter((_, index) => index !== clickedItemIndex);
     setCart(filteredCart);
   };
-
   const clearCart = () => {
     setCart([]);
   };
 
+  const updateCartItemPrice = (index, newPrice) => {
+    setCart((prevCart) => {
+      const updatedCart = [...prevCart];
+      updatedCart[index].price = newPrice;
+      return updatedCart;
+    });
+  };
+
   return (
-    <CartContext.Provider value={{ cart, handleAddItemCart, handleRemoveItemFromCart, clearCart }}>
+    <CartContext.Provider value={{ cart, setCart, handleAddItemCart, handleRemoveItemFromCart, clearCart }}>
       {children}
     </CartContext.Provider>
   );
