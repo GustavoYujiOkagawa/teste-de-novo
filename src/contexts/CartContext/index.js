@@ -22,16 +22,21 @@ export const CartProvider = ({ children }) => {
     setCart([]);
   };
 
-  const updateCartItemPrice = (index, newPrice) => {
-    setCart((prevCart) => {
-      const updatedCart = [...prevCart];
-      updatedCart[index].price = newPrice;
-      return updatedCart;
-    });
-  };
+
+
+  const addToCart = (item) => {
+    const existingItemIndex = cart.findIndex(cartItem => cartItem.name === item.name);
+    if (existingItemIndex !== -1) {
+      const updatedCart = [...cart];
+      updatedCart[existingItemIndex].count += 1;
+      setCart(updatedCart);
+    } else {
+      setCart([...cart, { ...item, count: 1 }]);
+    }
+  }
 
   return (
-    <CartContext.Provider value={{ cart, setCart, handleAddItemCart, handleRemoveItemFromCart, clearCart }}>
+    <CartContext.Provider value={{ cart, addToCart, setCart, handleAddItemCart, handleRemoveItemFromCart, clearCart }}>
       {children}
     </CartContext.Provider>
   );

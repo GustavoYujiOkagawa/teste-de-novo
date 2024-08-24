@@ -3,9 +3,10 @@ import { CartContext } from "../contexts/CartContext";
 import { Link, useNavigate } from "react-router-dom";
 import { IconArrowLeft } from "../constants";
 import CartCard from "../components/CartCard";
+import jsonData from '../data/menu.json';
 
 const CartPage = () => {
-  const { cart, setCart, handleRemoveItemFromCart, clearCart } = useContext(CartContext);
+  const { cart, setCart, clearCart, addToCart } = useContext(CartContext);
   const navigate = useNavigate();
 
   const updateItemPrice = (index, newPrice) => {
@@ -38,12 +39,6 @@ const CartPage = () => {
             {cart.map((item, index) => (
               <li key={index} className="cart-item-Product">
                 <CartCard item={item} index={index} updateItemPrice={updateItemPrice} />
-                <button
-                  className="Cart-Item-Button-Delete"
-                  onClick={() => handleRemoveItemFromCart(index)}
-                >
-                  Remover
-                </button>
               </li>
             ))}
           </ul>

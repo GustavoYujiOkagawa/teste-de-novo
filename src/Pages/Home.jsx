@@ -13,7 +13,13 @@ const Home = () => {
   const { cart, setCart } = useContext(CartContext); 
 
   const handleAddToCart = (item) => {
-    setCart([...cart, item]); 
+    const itemToAdd = {
+      id: item.id,
+      name: item.nome,
+      price: item.preco,
+      descricao: item.descricao,
+    };
+    setCart([...cart, itemToAdd]); 
   };
 
   return (
@@ -37,7 +43,7 @@ const Home = () => {
             imageSrc={IMAGES[index].src} 
             imageAlt={IMAGES[index].alt} 
             nome={prato.nome} 
-            descricao={prato.descricao}
+            preco={prato.preco}
             onAddToCart={() => handleAddToCart(prato)} 
           />
         ))}

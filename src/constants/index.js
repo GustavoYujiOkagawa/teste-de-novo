@@ -1,5 +1,5 @@
 //Importar as imagens. Mas sempre coloque na ordem aonde você vai querer usar.
-import HeaderImage from '../public/images/image 53.png'
+import HeaderImage from '../public/images/banner.png'
 
 import PromoBanner1 from '../public/images/image 48.png'
 import PromoBanner2 from '../public/images/image 49.png'
@@ -10,11 +10,14 @@ import imagem2 from '../public/images/imagem2.png'
 import imagem3 from '../public/images/imagem3.png'
 import imagem4 from '../public/images/imagem4.png'
 
-import navlink1 from '../public/images/navlinks1.png'
-import navlink2 from '../public/images/navlinks2.png'
-import navlink3 from '../public/images/navlinks3.png'
-import imageHome from '../public/images/imageHome.png'
-import navlink4 from '../public/images/navlinks4.png'
+import navHome from '../public/images/iconHome.png'
+import navMenu from '../public/images/iconMenu.png'
+import navCart from '../public/images/iconSacola.png'
+import navPromo from '../public/images/iconDesconto.png'
+import navHomeblack from '../public/images/HomeBlack.png'
+import navMenublack from '../public/images/menuBlack.png'
+import navCartblack from '../public/images/sacolablack.png'
+import navPromoblack from '../public/images/promoblack.png'
 
 import IconArrowLeft from '../public/images/IconArrowLeft.png'
 import iconHamburguer from '../public/images/iconHamburguer.png'
@@ -33,22 +36,30 @@ import iconCart from '../public/images/iconCart.png'
     imagem3,
     imagem4,
  }
+
+
  
 
  export const NAVLINKS =[
-   { id: 1, src: navlink1, alt: 'Imagens do Cardapio'},
-   { id: 2, src: navlink2, alt: 'Imagens do Cardapio'},
-   { id: 3, src: navlink3, alt: 'Imagens do Cardapio'},
-   { id: 4, src: navlink4, alt: 'Imagens do Cardapio'},
-   { id: 5, src: imageHome, alt: 'Imagens do Cardapio'},
+   { id: 1, src: navHome, alt: 'Imagens do Cardapio'},
+   { id: 2, src: navMenu, alt: 'Imagens do Cardapio'},
+   { id: 3, src: navCart, alt: 'Imagens do Cardapio'},
+   { id: 4, src: navPromo, alt: 'Imagens do Cardapio'},
+   { id: 1, src: navHomeblack, alt: 'Imagens do Cardapio'},
+   { id: 2, src: navMenublack, alt: 'Imagens do Cardapio'},
+   { id: 3, src: navCartblack, alt: 'Imagens do Cardapio'},
+   { id: 4, src: navPromoblack, alt: 'Imagens do Cardapio'},
 ]
 
 export{
-   navlink1,
-   navlink2,
-   navlink3,
-   navlink4,
-   imageHome
+   navHome,
+   navMenu,
+   navCart,
+   navPromo,
+   navHomeblack,
+   navMenublack,
+   navCartblack,
+   navPromoblack,
 }
 
 
