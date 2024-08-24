@@ -29,7 +29,7 @@ const CartPage = () => {
     <div className="cart-page">
       <div className="Cart-Item-Header">
         <Link to="/menu">
-          <img src={IconArrowLeft} width={24} alt="Icon-Left" />
+          <img src={IconArrowLeft} width={20} alt="Icon-Left" />
         </Link>
         <h2 className="Cart-Item-Info">Carrinho de Compras</h2>
       </div>

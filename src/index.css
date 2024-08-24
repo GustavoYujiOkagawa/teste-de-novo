@@ -19,18 +19,12 @@ body {
   overflow: hidden;
 }
 
-.content-image-hamburguer {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  padding: 24px;
-}
 
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  
 }
 
 .header-img {
@@ -213,7 +207,7 @@ a {
 
 .bottom-navbar {
   position: fixed;
-  bottom: 15px;
+  bottom: 0px;
   left: 0;
   width: 100%;
   background-color: #fff;
@@ -262,6 +256,10 @@ a {
   font-weight: 600;
   padding-bottom: 24px;
   padding-top: 24px;
+}
+
+.Heading-Info h3{
+  color: #532116;
 }
 
 .Icon-Cart {
@@ -422,6 +420,7 @@ a {
 .Cart-Item-Info {
   text-align: center;
   font-size: 1.1rem;
+  color: #532116;
 }
 
 .Cart-Item-containe {
@@ -517,9 +516,122 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 15px;
 }
 .input-group {
   display: flex;
   flex-direction: column;
   width: 90%;
+  margin-right: 15px;
+}
+
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px; 
+  margin-top: 20px;
+}
+
+
+.input-group label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-50%);
+  padding: 0 5px;
+  font-weight: 600;
+  color:#000000b9;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 8px;
+  padding-top: 16px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input::placeholder{
+  font-style: italic;
+}
+
+.input-group input:focus {
+  outline: none; 
+}
+
+.input-group-radio{
+  margin-right: 5rem;
+  margin-bottom: 20px;
+  padding: 0x 20px;
+}
+
+.input-group-textarea {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.input-group-textarea label {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color:#000000b9;
+  font-weight: 600;
+}
+
+.input-group-textarea textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  margin-right: 11rem;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical; 
+  border: none;
+  box-sizing: border-box;
+}
+
+.input-group-textarea textarea:focus {
+  outline: none;
+}
+
+.input-group-textarea textarea::placeholder {
+  font-style: italic;
+}
+
+.button-group-fina{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+}
+
+.btn-finalize{
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  padding: 4px 15px;
+  margin-top: 1rem;
+  height: 3rem;
+  background-color: #c22b15;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.header-final{
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding-top: 15px;
+  margin-bottom: 24px;
+}
+
+.header-info{
+  margin-right: 7rem;
+  color :#532116;
+  font-size: 1.2rem;
 }
