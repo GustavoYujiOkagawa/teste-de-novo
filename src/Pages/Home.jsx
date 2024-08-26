@@ -47,6 +47,7 @@ const Home = () => {
             onAddToCart={() => handleAddToCart(prato)} 
           />
         ))}
+       
       </section>
      
     </div>

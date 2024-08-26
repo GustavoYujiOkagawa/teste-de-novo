@@ -7,6 +7,7 @@ import CartPage from './Pages/CartPage';
 import FinalizePage from './Pages/FinalizePage';
 import { navCart, navCartblack, navHome, navHomeblack, navMenu, navMenublack, navPromo, navPromoblack } from './constants';
 
+
 function App() {
 
   const location = useLocation();
@@ -18,6 +19,7 @@ function App() {
         <Route path="/menu" element={<MenuList />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/finalizar" element={<FinalizePage />} />
+       
       </Routes>
       <nav className="bottom-navbar">
       <Link to="/" className={`navbar-item ${currentPath === '/' ? 'active': ''}`}>

@@ -1,12 +1,14 @@
 import React, { useContext, useState } from "react";
-import { imagem1 } from "../constants/index";
+import { imagem1, IMAGEMENU } from "../constants/index";
 import { CartContext } from "../contexts/CartContext";
+
 
 const CartCard = ({ item, index, updateItemPrice }) => {
   const { handleRemoveItemFromCart } = useContext(CartContext);
   const originalPrice = parseFloat(item.price);
   const [count, setCount] = useState(1);
   const [currentPrice, setCurrentPrice] = useState(originalPrice);
+
 
   const handleIncrement = () => {
     const newCount = count + 1;
@@ -28,10 +30,17 @@ const CartCard = ({ item, index, updateItemPrice }) => {
     }
   };
 
+
+  const findImage = (item) => {
+    const foundImage = IMAGEMENU.find(image => image.alt === item.name);
+    return foundImage ? foundImage.src : ''; 
+  };
+
+
   return (
     <div>
       <div className="Cart-Item-containe">
-        <img src={imagem1} width={50} height={50} alt={item.name} />
+      <img src={findImage(item)} width={60} height={70} alt={item.nome} />
         <div>
           <p className="Cart-Item-Name">{item.name}</p>
           <p className="Cart-Item-Text-Price">R${currentPrice.toFixed(2)}</p>

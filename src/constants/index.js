@@ -19,9 +19,22 @@ import navMenublack from '../public/images/menuBlack.png'
 import navCartblack from '../public/images/sacolablack.png'
 import navPromoblack from '../public/images/promoblack.png'
 
+import lancheOriginal from '../public/images/lancheoriginal.png';
+import lancheWrap from '../public/images/lancheWrap.png';
+import esseELancheWrap from '../public/images/esseéolanchewrap.png';
+import cachorroQuente from '../public/images/cachorroquente.png';
+
+import sucoDeLaranja from '../public/images/sucodelaranja.png';
+import cocaCola from '../public/images/cocacola.png';
+import cafe from '../public/images/cafe.png';
+
+import brownie from '../public/images/brownie.png';
+import tortaDeLimao from '../public/images/tortadelimao.png';
+
 import IconArrowLeft from '../public/images/IconArrowLeft.png'
 import iconHamburguer from '../public/images/iconHamburguer.png'
 import iconCart from '../public/images/iconCart.png'
+import iconDinheiro from '../public/images/iconDinheiro.png'
 
  export const IMAGES =[
     { id: 1, src: imagem1, alt: 'Imagens do Cardapio'},
@@ -37,8 +50,29 @@ import iconCart from '../public/images/iconCart.png'
     imagem4,
  }
 
-
+ export const IMAGEMENU = [
+   { id: 1, src: lancheOriginal, alt: 'Hambúrguer Clássico' },
+   { id: 2, src: lancheWrap, alt: 'Sanduíche de Frango' },
+   { id: 3, src: esseELancheWrap, alt: 'Wrap Vegetariano' },
+   { id: 4, src: cachorroQuente, alt: 'Cachorro-Quente Gourmet' },
+   { id: 5, src: sucoDeLaranja, alt: 'Suco de Laranja' },
+   { id: 6, src: cocaCola, alt: 'Refrigerante Cola' },
+   { id: 7, src: cafe, alt: 'Café Expresso' },
+   { id: 8, src: brownie, alt: 'Brownie de Chocolate' },
+   { id: 9, src: tortaDeLimao, alt: 'Torta de Limão' }
+ ]
  
+ export {
+   lancheOriginal,
+   lancheWrap,
+   esseELancheWrap,
+   cachorroQuente,
+   sucoDeLaranja,
+   cocaCola,
+   cafe,
+   brownie,
+   tortaDeLimao,
+};
 
  export const NAVLINKS =[
    { id: 1, src: navHome, alt: 'Imagens do Cardapio'},
@@ -84,10 +118,12 @@ export const ICON =[
     { id: 1, src: IconArrowLeft, alt: 'Imagens do icone'},
     { id: 2, src: iconHamburguer, alt: 'Imagens do icone'},
     { id: 3, src: iconCart, alt: 'Imagens do icone'},
+    { id: 3, src: iconDinheiro, alt: 'Imagens do icone'},
 ]
 
 export {
     iconHamburguer,
     iconCart,
-    IconArrowLeft
+    IconArrowLeft,
+    iconDinheiro
 }

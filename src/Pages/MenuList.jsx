@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+// src/pages/MenuList.js
+import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import MenuCard from '../components/MenuCard';
 import { IconArrowLeft } from '../constants';
@@ -7,7 +8,11 @@ import { Link } from 'react-router-dom';
 import pratosData from '../data/menu.json';
 import CartIcon from '../components/CartIcon';
 
+import ModalDescription from '../components/modalDescription';
+
 const MenuList = () => {
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -18,6 +23,17 @@ const MenuList = () => {
       }
     }
   }, [location]);
+
+  const handleCardClick = (item) => {
+    console.log("Item selecionado:", item); 
+    setSelectedItem(item);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedItem(null);
+  };
 
   const lanches = pratosData.lanches || [];
   const sobremesas = pratosData.sobremesas || [];
@@ -47,6 +63,7 @@ const MenuList = () => {
             <MenuCard
               key={prato.id}
               prato={prato}
+              onClick={handleCardClick} 
             />
           ))
         ) : (
@@ -60,6 +77,7 @@ const MenuList = () => {
             <MenuCard
               key={prato.id}
               prato={prato}
+              onClick={handleCardClick} 
             />
           ))
         ) : (
@@ -73,12 +91,21 @@ const MenuList = () => {
             <MenuCard
               key={prato.id}
               prato={prato}
+              onClick={handleCardClick} 
             />
           ))
         ) : (
           <p>Nenhuma bebida encontrada.</p>
         )}
       </div>
+      {/* Renderiza o modal se estiver aberto */}
+      {selectedItem && (
+        <ModalDescription
+          isOpen={isModalOpen}
+          onClose={handleCloseModal}
+          prato={selectedItem}
+        />
+      )}
     </div>
   );
 };

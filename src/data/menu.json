@@ -4,49 +4,33 @@
       "id": 1,
       "nome": "Hambúrguer Clássico",
       "preco": 29.9,
-      "descricao": "Hambúrguer de carne bovina, queijo cheddar, alface, tomate e molho especial."
+      "descricao": "Hambúrguer de carne bovina, queijo cheddar, alface, tomate e molho especial.",
+      "ingredientes": ["Carne bovina", "Queijo cheddar", "Alface", "Tomate", "Molho especial"],
+      "imagem": "/lancheoriginal.png"
     },
     {
       "id": 2,
       "nome": "Sanduíche de Frango",
       "preco": 24.9,
-      "descricao": "Pão ciabatta com filé de frango grelhado, queijo muçarela, rúcula e maionese de ervas."
-    },
-    {
-      "id": 3,
-      "nome": "Cheeseburger Bacon",
-      "preco": 32.9,
-      "descricao": "Hambúrguer de carne bovina, queijo cheddar, bacon crocante e molho barbecue."
+      "descricao": "Pão ciabatta com filé de frango grelhado, queijo muçarela, rúcula e maionese de ervas.",
+      "ingredientes": ["Pão ciabatta", "Filé de frango grelhado", "Queijo muçarela", "Rúcula", "Maionese de ervas"],
+      "imagem": "/images/lancheWrap.png"
     },
     {
       "id": 4,
-      "nome": "Wrap Vegetariano dublo",
+      "nome": "Wrap Vegetariano",
       "preco": 22.9,
-      "descricao": "Tortilla recheada com grão-de-bico, abacate, alface e molho tahine."
+      "descricao": "Tortilla recheada com grão-de-bico, abacate, alface e molho tahine.",
+      "ingredientes": ["Tortilla", "Grão-de-bico", "Abacate", "Alface", "Molho tahine"],
+      "imagem": "/images/esseéolanchewrap.png"
     },
     {
       "id": 5,
       "nome": "Cachorro-Quente Gourmet",
       "preco": 19.9,
-      "descricao": "Salsicha grelhada, molho especial, cebola caramelizada e queijo derretido."
-    },
-    {
-      "id": 6,
-      "nome": "Tostex de Presunto e Queijo",
-      "preco": 14.9,
-      "descricao": "Pão de forma tostado com presunto, queijo e orégano."
-    },
-    {
-      "id": 7,
-      "nome": "Panini de Atum",
-      "preco": 25.9,
-      "descricao": "Panini de atum com azeitonas, alface, tomate e maionese caseira."
-    },
-    {
-      "id": 8,
-      "nome": "Churrasco Grego",
-      "preco": 27.9,
-      "descricao": "Pão sírio com carne grelhada, molho tzatziki e salada grega."
+      "descricao": "Salsicha grelhada, molho especial, cebola caramelizada e queijo derretido.",
+      "ingredientes": ["Salsicha grelhada", "Molho especial", "Cebola caramelizada", "Queijo derretido"],
+      "imagem": "/images/cachorroquente.png"
     }
   ],
 
@@ -55,45 +39,44 @@
       "id": 1,
       "nome": "Suco de Laranja",
       "preco": 7.9,
-      "descricao": "Suco de laranja natural, sem açúcar com gelo para refrescar seu dia"
+      "descricao": "Suco de laranja natural, sem açúcar com gelo para refrescar seu dia",
+      "ingredientes": ["Laranja", "Gelo"],
+      "imagem": "/images/sucodelaranja.png"
     },
     {
       "id": 2,
       "nome": "Refrigerante Cola",
       "preco": 5.9,
-      "descricao": "Refrigerante de cola, lata 350ml."
-    },
-    {
-      "id": 3,
-      "nome": "Chá Gelado de Limão",
-      "preco": 6.9,
-      "descricao": "Chá gelado de limão com folhas de hortelã."
+      "descricao": "Refrigerante de cola, lata 350ml.",
+      "ingredientes": ["Água carbonatada", "Açúcar", "Corante caramelo", "Aromatizantes"],
+      "imagem": "/images/cocacola.png"
     },
     {
       "id": 4,
       "nome": "Café Expresso",
       "preco": 4.9,
-      "descricao": "Café expresso forte e aromático."
-    },
-    {
-      "id": 5,
-      "nome": "Smoothie de Frutas Vermelhas",
-      "preco": 12.9,
-      "descricao": "Smoothie cremoso de frutas vermelhas com iogurte."
+      "descricao": "Café expresso forte e aromático.",
+      "ingredientes": ["Café"],
+      "imagem": "/images/cafe.png"
     }
   ],
+  
   "sobremesas": [
     {
       "id": 1,
       "nome": "Brownie de Chocolate",
       "preco": 14.9,
-      "descricao": "Brownie de chocolate servido com sorvete de baunilha."
+      "descricao": "Brownie de chocolate servido com sorvete de baunilha.",
+      "ingredientes": ["Chocolate", "Manteiga", "Açúcar", "Farinha de trigo", "Ovos", "Sorvete de baunilha"],
+      "imagem": "/images/brownie.png"
     },
     {
       "id": 2,
       "nome": "Torta de Limão",
       "preco": 12.9,
-      "descricao": "Torta de limão com base crocante e macia por dentro"
+      "descricao": "Torta de limão com base crocante e macia por dentro",
+      "ingredientes": ["Farinha de trigo", "Manteiga", "Açúcar", "Limão", "Leite condensado", "Creme de leite"],
+      "imagem": "/images/tortadelimao.png"
     }
   ]
 }
