@@ -35,6 +35,7 @@ import IconArrowLeft from '../public/images/IconArrowLeft.png'
 import iconHamburguer from '../public/images/iconHamburguer.png'
 import iconCart from '../public/images/iconCart.png'
 import iconDinheiro from '../public/images/iconDinheiro.png'
+import iconTrash from '../public/images/ImageTrash.png'
 
  export const IMAGES =[
     { id: 1, src: imagem1, alt: 'Imagens do Cardapio'},
@@ -119,11 +120,13 @@ export const ICON =[
     { id: 2, src: iconHamburguer, alt: 'Imagens do icone'},
     { id: 3, src: iconCart, alt: 'Imagens do icone'},
     { id: 3, src: iconDinheiro, alt: 'Imagens do icone'},
+    { id: 3, src: iconTrash, alt: 'Imagens do icone'},
 ]
 
 export {
     iconHamburguer,
     iconCart,
     IconArrowLeft,
-    iconDinheiro
+    iconDinheiro,
+    iconTrash
 }

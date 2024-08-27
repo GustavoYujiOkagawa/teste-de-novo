@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
-import { imagem1, IMAGEMENU } from '../constants/index';
-import pratosData from '../data/menu.json';
+import { IMAGEMENU } from '../constants/index';
 
 const ModalDescription = ({ isOpen, onClose, prato }) => {
   const { handleAddItemCart } = useContext(CartContext);
@@ -9,7 +8,6 @@ const ModalDescription = ({ isOpen, onClose, prato }) => {
   if (!isOpen) return null;
 
   const handleClick = () => {
-    console.log("Prato no Modal:", prato); 
     handleAddItemCart(prato.id, prato.nome, prato.preco);
     onClose();
   };
@@ -20,18 +18,22 @@ const ModalDescription = ({ isOpen, onClose, prato }) => {
   };
 
   return (
-    <div className="modal-overlay">
-      <div className="modalImage">
-      <img src={findImage(prato)} width={420} alt={prato.nome} />
-      </div>
-      <button className="modal-close" onClick={onClose}>
-        X
-      </button>
-      <h2 className="name-modal">{prato.nome}</h2>
-      <div className="modal-content">
-        <p>{prato.descricao}</p>
-        <span>Preço: R${prato.preco.toFixed(2)}</span>
-        <button className="modal-button" onClick={handleClick}>Adicionar</button>
+    <div className="modern-modal-overlay"> 
+      <div className="modern-modal-content">
+        <button className="modern-modal-close" onClick={onClose}>
+          &times;
+        </button>
+        <div className="modern-modal-image-container">
+          <img src={findImage(prato)} alt={prato.nome} className="modern-modal-image"/>
+        </div>
+        <div className="modern-modal-info">
+          <h2 className="modern-modal-title">{prato.nome}</h2>
+          <p className="modern-modal-description">{prato.descricao}</p>
+          <div className="modern-modal-price">
+            <span>R${prato.preco.toFixed(2)}</span>
+          </div>
+          <button className="modern-modal-button" onClick={handleClick}>Adicionar ao Carrinho</button>
+        </div>
       </div>
     </div>
   );

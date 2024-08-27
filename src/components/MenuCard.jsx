@@ -18,17 +18,14 @@ const MenuCard = ({ prato, onClick }) => {
     <div className="button_menu" onClick={handleClick}>
       <div className="Card-Menu">
         <div className="Card-image-menu">
-          <img src={findImage(prato)} width={60} alt={prato.nome} />
+          <img src={findImage(prato)} className="Card-image" width={100} alt={prato.nome} />
         </div>
-        <div className="Card-hover-menu">
           <div className="Card-info-menu">
             <h5 className="Info">{prato.nome}</h5>
             <p className="info-paragraph">{prato.descricao}</p>
+            <span className="Info-price">R${prato.preco.toFixed(2)}</span>
           </div>
-          <div className="Info-price">
-            <span>{prato.preco.toFixed(2)}</span>
-          </div>
-        </div>
+        
       </div>
       <hr />
     </div>
