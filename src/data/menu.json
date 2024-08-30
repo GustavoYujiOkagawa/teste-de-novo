@@ -2,81 +2,218 @@
   "lanches": [
     {
       "id": 1,
-      "nome": "Hambúrguer Clássico",
-      "preco": 29.9,
-      "descricao": "Hambúrguer de carne bovina, queijo cheddar, alface, tomate e molho especial.",
-      "ingredientes": ["Carne bovina", "Queijo cheddar", "Alface", "Tomate", "Molho especial"],
-      "imagem": "/lancheoriginal.png"
+      "nome": "MISTO QUENTE",
+      "preco": 5.00,
+      "descricao": "Pão de Forma, Queijo e Presunto.",
+      "ingredientes": ["Queijo", "Presunto"]
     },
     {
       "id": 2,
-      "nome": "Sanduíche de Frango",
-      "preco": 24.9,
-      "descricao": "Pão ciabatta com filé de frango grelhado, queijo muçarela, rúcula e maionese de ervas.",
-      "ingredientes": ["Pão ciabatta", "Filé de frango grelhado", "Queijo muçarela", "Rúcula", "Maionese de ervas"],
-      "imagem": "/images/lancheWrap.png"
+      "nome": "HAMBÚRGUER CLÁSSICO",
+      "preco": 7.50,
+      "descricao":"Pão, Carne, Queijo e Salada.",
+      "ingredientes": ["carne", "queijo", "salada"]
     },
     {
       "id": 4,
-      "nome": "Wrap Vegetariano",
-      "preco": 22.9,
-      "descricao": "Tortilla recheada com grão-de-bico, abacate, alface e molho tahine.",
-      "ingredientes": ["Tortilla", "Grão-de-bico", "Abacate", "Alface", "Molho tahine"],
-      "imagem": "/images/esseéolanchewrap.png"
+      "nome": "X-EGG",
+      "preco": 9.50,
+      "descricao": "Pão, Carne, Queijo, Ovo, Presunto e Salada",
+      "ingredientes": ["carne", "queijo", "ovo", "presunto", "salada"]
     },
     {
       "id": 5,
-      "nome": "Cachorro-Quente Gourmet",
-      "preco": 19.9,
-      "descricao": "Salsicha grelhada, molho especial, cebola caramelizada e queijo derretido.",
-      "ingredientes": ["Salsicha grelhada", "Molho especial", "Cebola caramelizada", "Queijo derretido"],
-      "imagem": "/images/cachorroquente.png"
+      "nome": "X-CALABRESA",
+      "preco": 13.00,
+      "descricao": "Pão, Carne, Queijo, Calabresa e Salada",
+      "ingredientes": ["carne", "queijo", "calabresa", "salada"]
+    },
+    {
+      "id": 6,
+      "nome": "X-BACON",
+      "preco": 13.00,
+      "descricao": "Pão, Carne, Queijo, Bacon e Salada",
+      "ingredientes": ["carne", "queijo", "bacon", "salada"]
+    },
+    {
+      "id": 7,
+      "nome": "X-Frango",
+      "preco": 13.00,
+      "descricao": "Pão, Carne, Queijo, Frango e Salada",
+      "ingredientes": ["carne", "queijo", "frango", "salada"]
+    },
+    {
+      "id": 8,
+      "nome": "X-TUDO",
+      "preco": 19.90,
+      "descricao": "Pão, Carne, Queijo, Frango, Ovo, Presunto, Bacon, Calabresa, Batata, Palha e Salada",
+      "ingredientes": ["carne", "queijo", "frango", "ovo", "presunto", "bacon", "calabresa", "batata palha", "salada"]
     }
   ],
+
+  "pastel": [
+    {
+      "id": 1,
+      "nome": "PASTELÃO DE CAMARÃO",
+      "preco": 25.00
+    },
+    {
+      "id": 2,
+      "nome": "PASTELÃO DE FRANGO",
+      "preco": 10.00
+    },
+    {
+      "id": 3,
+      "nome": "PASTELÃO DE QUEIJO",
+      "preco": 10.00
+    },
+    {
+      "id": 4,
+      "nome": "PASTELÃO DE CARNE",
+      "preco": 10.00
+    },
+    {
+      "id": 5,
+      "nome": "PASTELÃO DE CALABRESA",
+      "preco": 10.00
+    },
+    {
+      "id": 6,
+      "nome": "PASTELÃO DE 2 QUEIJOS",
+      "preco": 14.00,
+      "descricao": "Queijo Cheddar, Queijo Mussarela e Queijo Coalho"
+    },
+    {
+      "id": 7,
+      "nome": "PASTELÃO DE PIZZA",
+      "preco": 14.00,
+      "descricao": "Queijo, Presunto, Tomate e Orégano"
+    }
+  ],
+
+  "burguerartesanais":[
+    {
+      "id": 1,
+      "nome": "NAIRÓBI",
+      "preco": 20.00,
+      "descricao": "Carne Artesanal 120g, Camarão, Queijo, Mussarela, Cream Cheese e Salada"
+    },
+    {
+      "id": 2,
+      "nome": "TOKIO",
+      "preco": 17.00,
+      "descricao": "Carne Artesanal 120g, Cebola Caramelizada, Fatia de Cheddar e Nacho"
+    },
+    {
+      "id": 3,
+      "nome": "PROFESSOR",
+      "preco": 14.90,
+      "descricao": "Carne Artesanal 120g, Presunto e Fatia de Cheddar"
+    },
+    {
+      "id": 4,
+      "nome": "BERLIM",
+      "preco": 20.00,
+      "descricao": "Carne Artesanal 120g, Fatia de Cheddar, Calabresa e Cream Cheese"
+    },
+    {
+      "id": 5,
+      "nome": "OSLO",
+      "preco": 24.90,
+      "descricao": "2 Carne Artesanal 120g, 2x Fatias de Cheddar, Cebola Caramelizada e Bacon"
+    }
+
+  ],
+
+
 
   "bebidas": [
     {
       "id": 1,
-      "nome": "Suco de Laranja",
-      "preco": 7.9,
-      "descricao": "Suco de laranja natural, sem açúcar com gelo para refrescar seu dia",
-      "ingredientes": ["Laranja", "Gelo"],
-      "imagem": "/images/sucodelaranja.png"
+      "nome": "COCA COLA LATA",
+      "preco": 5.00
     },
     {
       "id": 2,
-      "nome": "Refrigerante Cola",
-      "preco": 5.9,
-      "descricao": "Refrigerante de cola, lata 350ml.",
-      "ingredientes": ["Água carbonatada", "Açúcar", "Corante caramelo", "Aromatizantes"],
-      "imagem": "/images/cocacola.png"
+      "nome": "PEPSI LATA",
+      "preco": 5.00
+    },
+    {
+      "id": 3,
+      "nome": "H2O LIMONETO",
+      "preco": 6.00
     },
     {
       "id": 4,
-      "nome": "Café Expresso",
-      "preco": 4.9,
-      "descricao": "Café expresso forte e aromático.",
-      "ingredientes": ["Café"],
-      "imagem": "/images/cafe.png"
+      "nome": "GUARANÁ 1 LITRO",
+      "preco": 10.00
+    },
+    {
+      "id": 5,
+      "nome": "COCA COLA 2",
+      "preco": 15.00
+    },
+    {
+      "id": 6,
+      "nome": "GUARANÁ 2 LITRO",
+      "preco": 15.00
+    },
+    {
+      "id": 7,
+      "nome": "ÁGUA PEQUENA",
+      "preco": 2.50
+    },
+    {
+      "id": 8,
+      "nome": "PEPSI TWIST LATA",
+      "preco": 5.00
     }
   ],
-  
-  "sobremesas": [
+
+  "Cerveja": [
     {
       "id": 1,
-      "nome": "Brownie de Chocolate",
-      "preco": 14.9,
-      "descricao": "Brownie de chocolate servido com sorvete de baunilha.",
-      "ingredientes": ["Chocolate", "Manteiga", "Açúcar", "Farinha de trigo", "Ovos", "Sorvete de baunilha"],
-      "imagem": "/images/brownie.png"
+      "nome": "CORONA LONG NECK",
+      "preco": 10.00
+    }
+  ],
+
+  "sucos": [
+    {
+      "id": 1,
+      "nome": "SUCO MARACUJÁ 500 ML",
+      "preco": 7.00
     },
     {
       "id": 2,
-      "nome": "Torta de Limão",
-      "preco": 12.9,
-      "descricao": "Torta de limão com base crocante e macia por dentro",
-      "ingredientes": ["Farinha de trigo", "Manteiga", "Açúcar", "Limão", "Leite condensado", "Creme de leite"],
-      "imagem": "/images/tortadelimao.png"
+      "nome": "SUCO GOIABA 500 ML",
+      "preco": 7.00
+    },
+    {
+      "id": 3,
+      "nome": "SUCO DE CAJÁ 500 ML",
+      "preco": 7.00
+    }
+  ],
+  
+  "acai": [
+    {
+      "id": 1,
+      "nome": "COPO DE AÇAI RECHEADO 400 ML",
+      "preco": 10.00,
+      "descricao": "Leite em pó, Amendoim, leite Condensado e Banana"
+    },
+    {
+      "id": 2,
+      "nome": "BARCA DE AÇAI PEQUENA",
+      "preco": 25.00,
+      "descricao": "Leite em pó, Amendoim, Leite Condensado, Confete, Banana, Jujuba e Bis"
+    },
+    {
+      "id": 3,
+      "nome": "BARCA DE AÇAI GRANDE",
+      "preco": 45.90,
+      "descricao": "Leite em pó, Amendoim, Leite Condensado, Confete, Banana, Jujuba e Bis"
     }
   ]
 }

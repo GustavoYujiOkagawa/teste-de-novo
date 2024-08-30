@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import NavLinks from "../components/NavLinks";
 import CardIten from "../components/CardIten";
 import pratosData from '../data/menu.json';
-import { IMAGES } from "../constants/index";
+import { IMAGEMENU } from "../constants/index";
 import { CartContext } from "../contexts/CartContext"; 
 
 const lanches = pratosData.lanches.slice(0, 4);
@@ -40,8 +40,8 @@ const Home = () => {
         {lanches.map((prato, index) => (
           <CardIten 
             key={prato.id} 
-            imageSrc={IMAGES[index].src} 
-            imageAlt={IMAGES[index].alt} 
+            imageSrc={IMAGEMENU[index].src} 
+            imageAlt={IMAGEMENU[index].alt} 
             nome={prato.nome} 
             preco={prato.preco}
             onAddToCart={() => handleAddToCart(prato)} 

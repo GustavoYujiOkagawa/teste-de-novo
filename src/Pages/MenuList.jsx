@@ -36,8 +36,10 @@ const MenuList = () => {
   };
 
   const lanches = pratosData.lanches || [];
-  const sobremesas = pratosData.sobremesas || [];
+  const acai = pratosData.acai || [];
   const bebidas = pratosData.bebidas || [];
+  const pastel = pratosData.pastel || [];
+  const burguerartesanais = pratosData.burguerartesanais || [];
 
   return (
     <div className='Header-Menu-containe'>
@@ -70,10 +72,38 @@ const MenuList = () => {
           <p>Nenhum lanche encontrado.</p>
         )}
       </div>
+      <div id='burguerartesanais' className='Info-Product'>
+        <h5>Burguer Artesanais</h5>
+        {burguerartesanais.length > 0 ? (
+          burguerartesanais.map(prato => (
+            <MenuCard
+              key={prato.id}
+              prato={prato}
+              onClick={handleCardClick} 
+            />
+          ))
+        ) : (
+          <p>Nenhum lanche encontrado.</p>
+        )}
+      </div>
+      <div id='pastel' className='Info-Product'>
+        <h5>Pastel</h5>
+        {pastel.length > 0 ? (
+          pastel.map(prato => (
+            <MenuCard
+              key={prato.id}
+              prato={prato}
+              onClick={handleCardClick} 
+            />
+          ))
+        ) : (
+          <p>Nenhum lanche encontrado.</p>
+        )}
+      </div>
       <div id='sobremesas' className='Info-Product'>
         <h5>Açai</h5>
-        {sobremesas.length > 0 ? (
-          sobremesas.map(prato => (
+        {acai.length > 0 ? (
+          acai.map(prato => (
             <MenuCard
               key={prato.id}
               prato={prato}

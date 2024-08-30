@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
 import { IMAGEMENU } from '../constants/index';
 
-const ModalDescription = ({ isOpen, onClose, prato }) => {
+const FullscreenProductView = ({ isOpen, onClose, prato }) => {
   const { handleAddItemCart } = useContext(CartContext);
 
   if (!isOpen) return null;
@@ -18,25 +18,25 @@ const ModalDescription = ({ isOpen, onClose, prato }) => {
   };
 
   return (
-    <div className="modern-modal-overlay"> 
-      <div className="modern-modal-content">
-        <button className="modern-modal-close" onClick={onClose}>
+    <div className="fullscreen-view-overlay">
+      <div className="fullscreen-view-content">
+        <button className="fullscreen-view-close" onClick={onClose}>
           &times;
         </button>
-        <div className="modern-modal-image-container">
-          <img src={findImage(prato)} alt={prato.nome} className="modern-modal-image"/>
+        <div className="fullscreen-view-image-container">
+          <img src={findImage(prato)} alt={prato.nome} className="fullscreen-view-image"/>
         </div>
-        <div className="modern-modal-info">
-          <h2 className="modern-modal-title">{prato.nome}</h2>
-          <p className="modern-modal-description">{prato.descricao}</p>
-          <div className="modern-modal-price">
+        <div className="fullscreen-view-info">
+          <h2 className="fullscreen-view-title">{prato.nome}</h2>
+          <p className="fullscreen-view-description">{prato.descricao}</p>
+          <div className="fullscreen-view-price">
             <span>R${prato.preco.toFixed(2)}</span>
           </div>
-          <button className="modern-modal-button" onClick={handleClick}>Adicionar ao Carrinho</button>
+          <button className="fullscreen-view-button" onClick={handleClick}>Adicionar ao Carrinho</button>
         </div>
       </div>
     </div>
   );
 };
 
-export default ModalDescription;
+export default FullscreenProductView;

@@ -1,14 +1,14 @@
 import React from "react";
-import { IMAGEMENU } from "../constants"; // Certifique-se de que o caminho está correto
+import { IMAGEMENU } from "../constants"; 
 
 const MenuCard = ({ prato, onClick }) => {
 
-  //função para pegar os dados do menu.json
+
   const handleClick = () => {
     onClick(prato);
   };
 
- //Função para encontrar os pratos
+
   const findImage = (prato) => {
     const foundImage = IMAGEMENU.find(image => image.alt === prato.nome);
     return foundImage ? foundImage.src : ''; 
