@@ -10,10 +10,20 @@ const NavLinks = () => {
             to="/menu#lanches"
           >
             <div className="Navlinks_link_frits">
-              <span>Burguer</span>
+              <span>Lanches</span>
             </div>
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to="/menu#pastel"
+          >
+            <div className="Navlinks_link_frits">
+              <span>Pastel</span>
+            </div>
+          </NavLink>
+        </li>
+  
         <li>
           <NavLink
             to="/menu#sobremesas"

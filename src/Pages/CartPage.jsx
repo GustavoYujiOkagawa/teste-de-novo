@@ -50,7 +50,6 @@ const CartPage = () => {
               Concluir
             </button>
           </div>
-          <button className="btn-cart-clear" onClick={clearCart}>Limpar Carrinho</button>
         </div>
       ) : (
         <p>Seu carrinho está vazio.</p>

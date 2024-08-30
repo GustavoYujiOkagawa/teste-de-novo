@@ -4,7 +4,7 @@ import {HeaderImage} from '../constants/index'
 const Header = () => {
   return (
     <div className='header'>
-        <img src={HeaderImage} className='header-img' width={350} height={150} alt=""/>
+        <img src={HeaderImage} className='header-img' width={380} height={200} alt=""/>
     </div>
   )
 }

@@ -100,6 +100,8 @@ const MenuList = () => {
           <p>Nenhum lanche encontrado.</p>
         )}
       </div>
+
+      
       <div id='sobremesas' className='Info-Product'>
         <h5>Açai</h5>
         {acai.length > 0 ? (
